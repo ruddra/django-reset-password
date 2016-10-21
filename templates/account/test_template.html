@@ -1,19 +1,35 @@
 {# test template #}
 <!-- code for displaying success or error message in template -->
+
+{% extends "admin/base_site.html" %}
+{% load i18n admin_static %}
+
+{% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static "admin/css/login.css" %}" />{% endblock %}
+
+{% block bodyclass %}{{ block.super }} login{% endblock %}
+
+{% block nav-global %}{% endblock %}
+
+{% block content_title %}{% endblock %}
+
+{% block breadcrumbs %}{% endblock %}
+
+{% block content %}
 {% if messages %}
-<ul class="messages">
-    {% for message in messages %}
-    <li>
-        {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-    {% endfor %}
-    {% endif %}
-</ul>
+    <ul class="messages">
+        {% for message in messages %}
+        {% endfor %}
+        {% endif %}
+    </ul>
 
-<!-- Form rendering code for template -->
-<form action="" method="post">
+    <!-- Form rendering code for template -->
+    <form action="" method="post">
 
-    {% csrf_token %}
-    {{ form.as_p }}
+        {% csrf_token %}
+        {{ form.as_p }}
 
-    <input type="submit" value="Submit" />
-</form>
+        <input type="submit" value="Submit" />
+    </form>
+{% endblock %}
+
+

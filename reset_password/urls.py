@@ -24,5 +24,5 @@ except:
         # PS: url above is going to used for next section of
         # implementation.
         url(r'^account/reset_password',
-            ResetPasswordRequestView.as_view(), name="reset_password")
+            ResetPasswordRequestView.as_view())
     ]

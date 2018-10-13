@@ -1,5 +1,5 @@
 # django-reset-password
-This project is an implementation example for reset password of django from here: http://ruddra.com/2015/09/18/implementation-of-forgot-reset-password-feature-in-django/
+This project is an implementation example for reset password of django from here: https://ruddra.com/implementation-of-forgot-reset-password-feature-in-django/
 
 
 ### Updated on 17/08/2016
